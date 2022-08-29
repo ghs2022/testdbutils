@@ -12,6 +12,15 @@ import java.lang.reflect.Type;
 import java.sql.SQLException;
 import java.util.List;
 
+
+/**
+ * 使用DBUtils依赖要求
+ *      1.要求要查询的数据库表必须有相应的实体类
+ *      2.要求实体类中必须有无参构造方法
+ *      3.要求实体类中必须有Setter/Getter方法
+ *
+ * @param <T>
+ */
 public class DaoImpl<T> implements IDao<T> {
 
     private QueryRunner runner;
